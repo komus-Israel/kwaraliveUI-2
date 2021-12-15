@@ -20,12 +20,18 @@ export default function Businessowner() {
 			<Wrapper>
 				<Title>CREATE AN ACCOUNT</Title>
 				<Form>
-					<Input placeholder='First Name' />
-					<Input placeholder='Last Name' />
-					<Input placeholder='Phone' />
-					<Input placeholder='Email' />
-					<Input placeholder='Business Name' />
-					<Input placeholder='Website Url' />
+					<Input2>
+						<Input placeholder='First Name' />
+						<Input placeholder='Last Name' />
+					</Input2>
+					<Input2>
+						<Input placeholder='Phone' />
+						<Input placeholder='Email' />
+					</Input2>
+					<Input2>
+						<Input placeholder='Business Name' />
+						<Input placeholder='Website Url' />
+					</Input2>
 					<Select name='size' onChange={handleFilters}>
 						<Option>Select Business Catgory</Option>
 						<Option>XS</Option>
@@ -35,14 +41,16 @@ export default function Businessowner() {
 						<Option>XL</Option>
 					</Select>
 					<Input placeholder='Address' />
-					<Input placeholder='password' />
-					<Input placeholder='confirm password' />
-					<Input placeholder='Business Description' />
+					<Input2>
+						<Input placeholder='password' />
+						<Input placeholder='confirm password' />
+					</Input2>
+					<Input1 placeholder='Business Description' />
 					<Agreement>
 						By creating an account, I consent to the processing of my personal
 						data in accordance with the <b>PRIVACY POLICY</b>
 					</Agreement>
-					<Button>Register</Button>
+					<Button>Next</Button>
 				</Form>
 			</Wrapper>
 		</Container>
@@ -64,7 +72,6 @@ const Title1 = styled.img`
 `;
 
 const Wrapper = styled.div`
-	
 	width: 50%;
 	padding: 20px;
 	background: #1e35ad;
@@ -85,6 +92,7 @@ const Title = styled.h1`
 const Form = styled.form`
 	display: flex;
 	flex-wrap: wrap;
+	
 `;
 
 const Input = styled.input`
@@ -95,6 +103,15 @@ const Input = styled.input`
 	border: none;
 	border-radius: 8px;
 `;
+const Input1 = styled.textarea`
+margin-top: 1rem;
+width:100%;
+height: 10vh;
+`
+const Input2 = styled.div`
+display: flex;
+width: 100%;
+`
 
 const Agreement = styled.span`
 	font-size: 12px;
@@ -103,7 +120,7 @@ const Agreement = styled.span`
 `;
 
 const Button = styled.button`
-	margin-left: 5rem;
+	margin-left: 7rem;
 	width: 60%;
 	display: inline-block;
 	background: hsla(0, 0%, 100%, 0.2);

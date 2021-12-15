@@ -103,3 +103,21 @@ export const category = [
 		name: "Beauty",
 	},
 ];
+
+export const getStarted = [
+	{
+		id: 1,
+		img: "https://getprospa.com/static/icons/unreg/checkmark.svg",
+		text: "Unique business name",
+	},
+	{
+		id: 2,
+		img: "https://getprospa.com/static/icons/unreg/checkmark.svg",
+		text: "Information and ID for all proprietors",
+	},
+	{
+		id: 3,
+		img: "https://getprospa.com/static/icons/unreg/checkmark.svg",
+		text: "Proprietor BVN",
+	},
+];
