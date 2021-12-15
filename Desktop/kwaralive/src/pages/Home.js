@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Svg from '../components/Svg';
 import Newsletter from '../components/Newsletter';
 import Getstarted from '../components/Getstarted';
+import Contact from '../components/Contact';
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
             <Business />
             <Getstarted />
             <AppDownload />
+            <Contact />
             <Newsletter />
             <Footer />
         </div>
