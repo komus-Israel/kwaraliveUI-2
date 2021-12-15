@@ -5,6 +5,7 @@ import Business from "../components/Business";
 import AppDownload from "../components/AppDownload";
 import Footer from "../components/Footer";
 import Svg from '../components/Svg';
+import Newsletter from '../components/Newsletter';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
             <Svg />
             <Business />
             <AppDownload />
+            <Newsletter />
             <Footer />
         </div>
     )

@@ -1,6 +1,7 @@
 import { Send } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 export default function Newsletter() {
 	return (
@@ -53,6 +54,6 @@ const Input = styled.input`
 const Button = styled.button`
 	flex: 1;
 	border: none;
-	background-color: #1ead2c;
+	background: #1e35ad;
 	color: white;
 `;
