@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
 	const [slideIndex, setSlideIndex] = useState(0);
@@ -28,12 +29,16 @@ export default function Landing() {
 							<Topbar>
 								<Left>
 									<Images src='http://www.kwaralive.com/images/logo.png' />
-									<MenuItem>Register Your Business</MenuItem>
+									<Link to='/register'>
+										<MenuItem>Register Your Business</MenuItem>
+									</Link>
 								</Left>
 								<Right>
-									<MenuItem>
-										<Button>Log In</Button>
-									</MenuItem>
+									<Link to="/login">
+										<MenuItem>
+											<Button>Log In</Button>
+										</MenuItem>
+									</Link>
 									<MenuItem>
 										<SearchIcon />
 									</MenuItem>

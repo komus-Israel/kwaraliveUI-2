@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
 
 export default function Regularuser() {
@@ -13,15 +14,17 @@ export default function Regularuser() {
 					<Input placeholder='Last Name' />
 					<Input placeholder='Phone' />
 					<Input placeholder='Email' />
-                    <Input placeholder="Username" />
-                    <Input placeholder="Address" />
+					<Input placeholder='Username' />
+					<Input placeholder='Address' />
 					<Input placeholder='password' />
 					<Input placeholder='confirm password' />
 					<Agreement>
 						By creating an account, I consent to the processing of my personal
 						data in accordance with the <b>PRIVACY POLICY</b>
 					</Agreement>
-					<Button>Register</Button>
+					<Link to='/'>
+						<Button>Register</Button>
+					</Link>
 				</Form>
 			</Wrapper>
 		</Container>
@@ -78,7 +81,7 @@ const Agreement = styled.span`
 `;
 
 const Button = styled.button`
-	margin-left: 5rem;
+	margin-left: 12.5rem;
 	width: 60%;
 	display: inline-block;
 	background: hsla(0, 0%, 100%, 0.2);
@@ -91,5 +94,6 @@ const Button = styled.button`
 	letter-spacing: var(--spacing);
 	cursor: pointer;
 	transition: var(--transition);
+	margin-top: 1rem;
 	margin-bottom: 2rem;
 `;

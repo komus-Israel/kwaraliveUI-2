@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
 
 export default function Register() {
@@ -7,8 +8,12 @@ export default function Register() {
 			<Container>
 				<Wrapper>
 					<Title1>Register as</Title1>
-					<Button>A Business Owner</Button>
-					<Button>A Regular User</Button>
+					<Link to='/businessuser'>
+						<Button>A Business Owner</Button>
+					</Link>
+					<Link to='regularuser'>
+						<Button>A Regular User</Button>
+					</Link>
 				</Wrapper>
 			</Container>
 		);
@@ -55,7 +60,7 @@ margin-left: 5rem;
     margin-bottom: 2rem;
 `;
 
-const Link = styled.a`
+const Links = styled.a`
 	margin: 5px 0px;
 	font-size: 12px;
 	text-decoration: underline;
