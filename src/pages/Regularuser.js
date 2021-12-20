@@ -9,6 +9,8 @@ export default function Regularuser() {
 			<Title1 src='http://www.kwaralive.com/images/logo.png' />
 			<Wrapper>
 				<Title>CREATE AN ACCOUNT</Title>
+
+				<Wrapper>
 				<Form>
 					<Input placeholder='First Name' />
 					<Input placeholder='Last Name' />
@@ -26,6 +28,8 @@ export default function Regularuser() {
 						<Button>Register</Button>
 					</Link>
 				</Form>
+				</Wrapper>
+				
 			</Wrapper>
 		</Container>
 	);
