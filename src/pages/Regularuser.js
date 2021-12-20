@@ -1,25 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
 
 export default function Regularuser() {
+
+
+	const [firstName, setFirstName] = useState('')
+	const [lastName, setLastName] = useState('')
+	const [phone, setPhone] = useState('')
+	const [email, setEmail] = useState('')
+	const [address, setAddress] = useState('')
+	const [password, setPassword] = useState('')
+	const [confirmPassword, setConfirmPassword] = useState('')
+	
+
+
 	return (
 		<Container>
 			<Title1 src='http://www.kwaralive.com/images/logo.png' />
 			<Wrapper>
 				<Title>CREATE AN ACCOUNT</Title>
-
-				<Wrapper>
 				<Form>
-					<Input placeholder='First Name' />
-					<Input placeholder='Last Name' />
-					<Input placeholder='Phone' />
-					<Input placeholder='Email' />
-					<Input placeholder='Username' />
-					<Input placeholder='Address' />
-					<Input placeholder='password' />
-					<Input placeholder='confirm password' />
+					<Input placeholder='First Name' value={firstName}/>
+					<Input placeholder='Last Name' value={lastName}/>
+					<Input placeholder='Phone' value={phone}/>
+					<Input placeholder='Email' value={email}/>
+					<Input placeholder='Address' value={address}/>
+					<Input placeholder='password' value={password}/>
+					<Input placeholder='confirm password' value={confirmPassword}/>
 					<Agreement>
 						By creating an account, I consent to the processing of my personal
 						data in accordance with the <b>PRIVACY POLICY</b>
@@ -28,7 +37,6 @@ export default function Regularuser() {
 						<Button>Register</Button>
 					</Link>
 				</Form>
-				</Wrapper>
 				
 			</Wrapper>
 		</Container>
