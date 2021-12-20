@@ -24,18 +24,18 @@ export default function Regularuser() {
 				<Title>CREATE AN ACCOUNT</Title>
 				<Form>
 					<Input placeholder='First Name' value={first_name} onChange={(e)=>setFirstName(e.target.value)}/>
-					<Input placeholder='Last Name' value={last_name}/>
-					<Input placeholder='Phone' value={phone_number}/>
-					<Input placeholder='Email' value={email}/>
-					<Input placeholder='Address' value={address}/>
-					<Input placeholder='password' value={password}/>
-					<Input placeholder='confirm password' value={confirmPassword}/>
+					<Input placeholder='Last Name' value={last_name} onChange={(e)=>setLastName(e.target.value)}/>
+					<Input placeholder='Phone' value={phone_number} onChange={(e)=>setPhone(e.target.value)}/>
+					<Input placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+					<Input placeholder='Address' value={address} onChange={(e)=>setAddress(e.target.value)}/>
+					<Input placeholder='password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+					<Input placeholder='confirm password' value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}/>
 					<Agreement>
 						By creating an account, I consent to the processing of my personal
 						data in accordance with the <b>PRIVACY POLICY</b>
 					</Agreement>
 					<Link to='/'>
-						<Button onClick = {()=>handleUserRegistration({first_name, last_name, phone_number, email, address, password})}>Register</Button>
+						<Button onClick = {(e)=>handleUserRegistration(e,{first_name, last_name, phone_number, email, address, password})}>Register</Button>
 					</Link>
 				</Form>
 				
