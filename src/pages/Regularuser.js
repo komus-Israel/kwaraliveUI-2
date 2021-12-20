@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
+import { handleUserRegistration } from '../functions';
 
 export default function Regularuser() {
 
 
-	const [firstName, setFirstName] = useState('')
-	const [lastName, setLastName] = useState('')
-	const [phone, setPhone] = useState('')
+	const [first_name, setFirstName] = useState('')
+	const [last_name, setLastName] = useState('')
+	const [phone_number, setPhone] = useState('')
 	const [email, setEmail] = useState('')
 	const [address, setAddress] = useState('')
 	const [password, setPassword] = useState('')
@@ -22,9 +23,9 @@ export default function Regularuser() {
 			<Wrapper>
 				<Title>CREATE AN ACCOUNT</Title>
 				<Form>
-					<Input placeholder='First Name' value={firstName}/>
-					<Input placeholder='Last Name' value={lastName}/>
-					<Input placeholder='Phone' value={phone}/>
+					<Input placeholder='First Name' value={first_name} onChange={(e)=>setFirstName(e.target.value)}/>
+					<Input placeholder='Last Name' value={last_name}/>
+					<Input placeholder='Phone' value={phone_number}/>
 					<Input placeholder='Email' value={email}/>
 					<Input placeholder='Address' value={address}/>
 					<Input placeholder='password' value={password}/>
@@ -34,7 +35,7 @@ export default function Regularuser() {
 						data in accordance with the <b>PRIVACY POLICY</b>
 					</Agreement>
 					<Link to='/'>
-						<Button>Register</Button>
+						<Button onClick = {()=>handleUserRegistration({first_name, last_name, phone_number, email, address, password})}>Register</Button>
 					</Link>
 				</Form>
 				
